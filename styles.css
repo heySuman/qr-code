@@ -1,51 +1,80 @@
-html, body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
-#container{
-    width: 500px;
+#container {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
 
-    margin: 0 auto;
+h1 {
+  text-align: center;
+}
 
+div {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+#input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #2b4cc5;
+  color: white;
+  border-radius: 4px;
+}
+
+#qrcode {
+  margin-top: 20px;
+  display: grid;
+  place-content: center;
+}
+
+#download {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  #container {
+    width: auto;
+    flex-direction: column;
+  }
+
+  #container div {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+  }
 
-    h1{
-        text-align: center;
-    }
+  #input {
+    width: 90%;
+    padding: 10px 0;
+    text-indent: 12px;
+  }
 
-    div{
-
-        display: flex;
-
-        #input{
-            width: 400px;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border: 1px solid gray;
-            border-radius: 4px;
-        }
-
-        button
-        {
-            cursor: pointer;
-        }
-    }
-}
-
-@media (prefers-color-scheme:dark){
-    body{
-        color: #fff;
-        background: #000;
-    }
-
-    #qrcode{
-        padding: 10px;
-        background: gray;
-    }
+  button {
+    width: 90%;
+  }
 }
