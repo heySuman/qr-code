@@ -1,0 +1,51 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    width: 500px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    h1{
+        text-align: center;
+    }
+
+    div{
+
+        display: flex;
+
+        #input{
+            width: 400px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: 1px solid gray;
+            border-radius: 4px;
+        }
+
+        button
+        {
+            cursor: pointer;
+        }
+    }
+}
+
+@media (prefers-color-scheme:dark){
+    body{
+        color: #fff;
+        background: #000;
+    }
+
+    #qrcode{
+        padding: 10px;
+        background: gray;
+    }
+}
